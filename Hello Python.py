@@ -1,1 +1,1 @@
-print('Estudar Python e bom!!!')
+print('Estudar Python é legal!!!')
