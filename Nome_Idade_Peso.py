@@ -6,5 +6,5 @@ if weight <= 60:
     print('Olá! '+name+' você está em forma para alguém da sua idade')
     print('*********FIM**********')
 else:
-    print('Olá! '+name+' você tem obesidade morbida, cuidado, Você morrerrá')
+    print('Olá! '+name+' você tem obesidade morbida, cuidado, Você morrerrá!')
     print('*********FIM**********')
