@@ -4,16 +4,21 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 
 
-class PrimeiroApp(App):
+class ContadorApp(App):
     def build(self):
-        box = BoxLayout(orientation='horizontal')
-        button = Button(text='Botao1' ,font_size=30,on_release=self.increase)
-        label = Label(text='Texto1' ,font_size=30)
-        box.add_widget(button)
-        box.add_widget(label)
+        box = BoxLayout(orientation='vertical')
+        button1 = Button(text='Volume +' ,font_size=25,on_release=self.increase)
+        button2 = Button(text='Volume -' ,font_size=25,on_release=self.decrease)
+        self.label = Label(text='1' ,font_size=25)
+        box.add_widget(button1)
+        box.add_widget(button2)
+        box.add_widget(self.label)
         return box
 
-    def increase(self, button):
-        button.text = 'Soltei'
+    def increase(self, button1):
+        self.label.text = str(int(self.label.text)+1)
 
-PrimeiroApp().run()
+    def decrease(self, button2):
+        self.label.text = str(int(self.label.text)-1)
+
+ContadorApp().run()
