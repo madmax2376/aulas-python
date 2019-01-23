@@ -1,0 +1,14 @@
+<Increase>:
+    orientation: 'vertical'
+    Button:
+        text: 'Volume +'
+        font_size:25
+        on_release: label.text = str(int(label.text)+1)
+    Button:
+        text: 'Volume -'
+        font_size:25
+        on_release: label.text = str(int(label.text)-1)
+    Label:
+        id: label
+        text: '1'
+        font_size:25
